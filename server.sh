@@ -2,9 +2,13 @@
 
 set -e
 
-## sudo chmod +x server.sh
+# =========================================
+# Automated Server Setup Script (Debian/Ubuntu)
+# Author: Vas
+# Features: Docker CE, Portainer CE, CasaOS, BTop, Nala, duf, Fastfetch, OpenSSH
+# =========================================
 
-#Clear screen 
+# Clear the terminal
 clear
 
 echo "$(tput setaf 3)  Welcome to the automated Server installer script by Vas :)."
@@ -13,13 +17,27 @@ echo "  Installing Docker Engine, Casa OS, Portainer for Docker, BTop, Nala"
 
 read -p "Press Enter to continue" </dev/tty
 
-## Timer
+# -----------------------------
+# Utility function: countdown
+# -----------------------------
 for count in {1..10}; do
     echo "**************************************************"
     echo -ne "${count}\r"
     sleep 1
 done
-echo "***** Installing Docker Engine *****"
+
+# -----------------------------
+# Update & basic packages
+# -----------------------------
+echo "Updating system packages..."
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install -y sudo curl wget git htop unzip software-properties-common apt-transport-https ca-certificates gnupg lsb-release
+
+# -----------------------------
+# Docker CE Installation
+# -----------------------------
+echo "Installing Docker CE..."
 
 ##Runing the following command to uninstall all conflicting packages:
 
@@ -79,7 +97,11 @@ newgrp docker
 
 docker ps
 
-## Portainer for Docker
+# -----------------------------
+# Portainer CE Installation
+# -----------------------------
+echo "Installing Portainer CE..."
+
 sudo docker volume create portainer_data
 
 ## If you require HTTP port 9000 / 8000 open for legacy reasons, add the following to your docker run command:
@@ -95,7 +117,11 @@ for count in {1..10}; do
 done
 echo "***** Casa OS Installation *****"
 
-## Casa OS installation
+# -----------------------------
+# CasaOS Installation
+# -----------------------------
+echo "Installing CasaOS..."
+
 sudo apt update
 curl -fsSL https://get.casaos.io | sudo bash
 
@@ -113,7 +139,11 @@ for count in {1..10}; do
 done
 echo "***** Other Applications Installing *****"
 
-## Applications 
+# -----------------------------
+# Other Applications
+# -----------------------------
+echo "Installing other utilities..."
+
 sudo apt install btop -y
 sudo apt install nala -y 
 sudo apt install duf -y
@@ -129,7 +159,9 @@ sudo apt install fastfetch
 echo 'fastfetch' >> ~/.bashrc
 echo 'duf' >> ~/.bashrc
 
-
+# -----------------------------
+# Final message
+# -----------------------------
 echo ""
 echo ""
 echo "$(tput setaf 3) Installation Complete."
