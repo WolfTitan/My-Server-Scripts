@@ -1,6 +1,10 @@
 # My-Server-Scripts
 When setting up a fresh server, having a reliable set of installation scripts can save significant time and ensure consistency. Below are the core components I typically install on a new Debian or Ubuntu server.
 
+**Instructions:**
+**Usage:**
+Once you’ve cloned or downloaded the repository, grant execute permissions with `sudo chmod +x server.sh` and then start the script by running `./server.sh`.
+
 Here’s what the script includes.
 
 ---
@@ -78,7 +82,8 @@ Documentation: https://medium.com/thenixos/what-is-linux-alias-and-how-do-you-us
 ---
 
 
-After downloading the script, run sudo chmod +x server.sh to make it executable.
+
+
 
 
 
