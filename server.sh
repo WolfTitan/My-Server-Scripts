@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 ## sudo chmod +x server.sh
 
 #Clear screen 
