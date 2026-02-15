@@ -75,6 +75,11 @@ A Linux alias is a shortcut or an abbreviation for a longer command, command seq
 
 Documentation: https://medium.com/thenixos/what-is-linux-alias-and-how-do-you-use-it-57fb17a69764
 
+---
+
+
+After downloading the script, run sudo chmod +x server.sh to make it executable.
+
 
 
 
