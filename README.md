@@ -5,6 +5,8 @@ When setting up a fresh server, having a reliable set of installation scripts ca
 **Usage:**
 Once you’ve cloned or downloaded the repository, grant execute permissions with `sudo chmod +x server.sh` and then start the script by running `./server.sh`.
 
+This will execute the full setup process automatically.
+
 Here’s what the script includes.
 
 ---
