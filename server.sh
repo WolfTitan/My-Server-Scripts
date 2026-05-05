@@ -162,8 +162,39 @@ echo 'duf' >> ~/.bashrc
 # -----------------------------
 # Final message
 # -----------------------------
+
+# Docker
+echo -n "Docker: "
+docker --version || echo "Not installed"
+
+# Docker Compose
+echo -n "Docker Compose: "
+docker compose version || echo "Not installed"
+
+# BTop
+echo -n "BTop: "
+btop -v 2>/dev/null || echo "Not installed"
+
+# Nala
+echo -n "Nala: "
+nala --version 2>/dev/null || echo "Not installed"
+
+# duf
+echo -n "Duf: "
+duf --version 2>/dev/null || echo "Not installed"
+
+# Fastfetch
+echo -n "Fastfetch: "
+fastfetch --version 2>/dev/null || echo "Not installed"
+
+# OpenSSH
+echo -n "OpenSSH: "
+ssh -V 2>&1 | head -n1 || echo "Not installed"
+
 echo ""
 echo ""
-echo "$(tput setaf 3) Installation Complete."
+echo "Installation Complete."
+echo "You can now logout/login to apply Docker group changes if needed."
+echo "Reboot the server if necessary."
 read -p "Press Enter to continue" </dev/tty
 
