@@ -4,7 +4,7 @@ set -e
 
 # =========================================
 # Automated Server Setup Script (Debian/Ubuntu)
-# Author: Vas
+# Author: WolfTitan
 # Features: Docker CE, Portainer CE, CasaOS, BTop, Nala, duf, Fastfetch, OpenSSH
 # =========================================
 
