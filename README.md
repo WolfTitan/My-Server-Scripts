@@ -81,8 +81,13 @@ Documentation: https://medium.com/thenixos/what-is-linux-alias-and-how-do-you-us
 
 ---
 
+### 10. NCDU
 
+(NCurses Disk Usage) is an interactive, command-line disk analyzer for Linux and other Unix-like systems.
 
+Documentation: https://github.com/WillKirkmanM/ncdu
+
+---
 
 
 
