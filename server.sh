@@ -5,7 +5,7 @@ set -e
 # =========================================
 # Automated Server Setup Script (Debian/Ubuntu)
 # Author: WolfTitan
-# Features: Docker CE, Portainer CE, CasaOS, BTop, Nala, duf, Fastfetch, OpenSSH
+# Features: Docker CE, Portainer CE, CasaOS, BTop, Nala, duf, Fastfetch, OpenSSH, NCDU
 # =========================================
 
 # Clear the terminal
@@ -144,9 +144,17 @@ echo "***** Other Applications Installing *****"
 # -----------------------------
 echo "Installing other utilities..."
 
+#BTop
 sudo apt install btop -y
+
+#Nala
 sudo apt install nala -y 
+
+#DUF
 sudo apt install duf -y
+
+#NCDU
+sudo apt install ncdu -y
 
 ## fastfetch
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
